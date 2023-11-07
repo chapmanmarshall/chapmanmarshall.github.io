@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="car" src="https://www.carscoops.com/wp-content/uploads/2022/09/2000-Acura-Integra-11-1024x683.jpg">
+    <p id="vtec">score = 1</p>
+    <button id="honda" type="button">upgrade</button>
+    
+    
+</body>
+
+</html>
+<script>
+    var score = 0
+    var increasescore = 1
+    document.getElementById("car").addEventListener("click", addscore)
+    document.getElementById("honda").addEventListener("click", upgrade)
+    function addscore() {
+        setInterval(addscore,2000)
+        score = score + increasescore
+        document.getElementById("vtec").innerText = score
+    }
+
+    function upgrade() {
+        if(score>=10){ 
+            increasescore = 2
+            score = score - 10
+        document.getElementById("vtec").innerText = score
+
+        }
+       
+        
+    }
+</script>
